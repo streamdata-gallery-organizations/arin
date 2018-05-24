@@ -4,7 +4,7 @@ x-collection-name: ARIN
 x-complete: 1
 info:
   title: Reverse DNS API
-  description: for-managing-reverse-dns
+  description: for-managing-reverse-dns-
   version: 1.0.0
 schemes:
 - http
