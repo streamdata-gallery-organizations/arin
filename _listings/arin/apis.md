@@ -9,8 +9,8 @@ image: http://kinlane-productions.s3.amazonaws.com/screen-capture-api/1381-arin.
 x-kinRank: "8"
 x-alexaRank: "51791"
 tags: ARIN
-created: "2018-05-24"
-modified: "2018-05-24"
+created: "2018-06-20"
+modified: "2018-06-20"
 url: https://raw.githubusercontent.com/streamdata-gallery-organizations/arin/master/_listings/arin/apis.md
 specificationVersion: "0.14"
 apis:
@@ -158,18 +158,6 @@ apis:
     url: https://raw.githubusercontent.com/streamdata-gallery-organizations/arin/master/_listings/arin/delegation-delete-postman.md
   - type: x-openapi-spec
     url: https://raw.githubusercontent.com/streamdata-gallery-organizations/arin/master/_listings/arin/delegation-delete-openapi.md
-- name: 'Delegation API '
-  x-api-slug: delegation-api
-  description: ""
-  image: http://kinlane-productions.s3.amazonaws.com/screen-capture-api/1381-arin.jpg
-  humanURL: https://www.arin.net
-  baseURL: https://www.arin.net//regrws/core/v1/
-  tags: ""
-  properties:
-  - type: x-postman-collection
-    url: https://raw.githubusercontent.com/streamdata-gallery-organizations/arin/master/_listings/arin/post-postman.md
-  - type: x-openapi-spec
-    url: https://raw.githubusercontent.com/streamdata-gallery-organizations/arin/master/_listings/arin/post-openapi.md
 - name: Delegation API
   x-api-slug: delegation-api
   description: 'The American Registry for Internet Numbers (ARIN) is a Regional Internet
