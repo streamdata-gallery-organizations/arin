@@ -6,8 +6,6 @@ info:
   title: Customers API Manage customers
   description: ""
   version: "1.0"
-host: whois.arin.net
-basePath: /rest
 schemes:
 - http
 produces:
@@ -15,6 +13,45 @@ produces:
 consumes:
 - application/json
 paths:
+  /asn:
+    get:
+      summary: Autonomous System Number(s)
+      description: ""
+      operationId: asn
+      x-api-path-slug: asn-get
+      parameters:
+      - in: query
+        name: handle
+        description: the handle of the ASN
+        type: string
+        format: string
+      responses:
+        200:
+          description: OK
+      tags:
+      - Autonomous Systen Numbers
+  /asn/pocs:
+    get:
+      summary: List POCs
+      description: lists the POCs associated with a given ASN.
+      operationId: asnPocs
+      x-api-path-slug: asnpocs-get
+      responses:
+        200:
+          description: OK
+      tags:
+      - POCs
+  cidr/:
+    get:
+      summary: IP and CIDR Queries
+      description: ""
+      operationId: cidr
+      x-api-path-slug: cidr-get
+      responses:
+        200:
+          description: OK
+      tags:
+      - CIDR
   /customers:
     get:
       summary: Manage customers
@@ -37,6 +74,8 @@ paths:
           description: OK
       tags:
       - Customers
+host: whois.arin.net
+basePath: /rest
 x-streamrank:
   polling_total_time_average: 0
   polling_size_download_average: 0

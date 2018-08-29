@@ -13,6 +13,34 @@ produces:
 consumes:
 - application/json
 paths:
+  /asn:
+    get:
+      summary: Autonomous System Number(s)
+      description: ""
+      operationId: asn
+      x-api-path-slug: asn-get
+      parameters:
+      - in: query
+        name: handle
+        description: the handle of the ASN
+        type: string
+        format: string
+      responses:
+        200:
+          description: OK
+      tags:
+      - Autonomous Systen Numbers
+  /asn/pocs:
+    get:
+      summary: List POCs
+      description: lists the POCs associated with a given ASN.
+      operationId: asnPocs
+      x-api-path-slug: asnpocs-get
+      responses:
+        200:
+          description: OK
+      tags:
+      - POCs
   cidr/:
     get:
       summary: IP and CIDR Queries

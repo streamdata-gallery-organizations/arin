@@ -8,8 +8,6 @@ info:
     Delegation specified in your URL, and return a payload containing that Delegation's
     information after the nameserver has been added.
   version: 1.0.0
-host: www.arin.net
-basePath: /regrws/core/v1
 schemes:
 - http
 produces:
@@ -17,6 +15,67 @@ produces:
 consumes:
 - application/json
 paths:
+  /asn:
+    get:
+      summary: Autonomous System Number(s)
+      description: ""
+      operationId: asn
+      x-api-path-slug: asn-get
+      parameters:
+      - in: query
+        name: handle
+        description: the handle of the ASN
+        type: string
+        format: string
+      responses:
+        200:
+          description: OK
+      tags:
+      - Autonomous Systen Numbers
+  /asn/pocs:
+    get:
+      summary: List POCs
+      description: lists the POCs associated with a given ASN.
+      operationId: asnPocs
+      x-api-path-slug: asnpocs-get
+      responses:
+        200:
+          description: OK
+      tags:
+      - POCs
+  cidr/:
+    get:
+      summary: IP and CIDR Queries
+      description: ""
+      operationId: cidr
+      x-api-path-slug: cidr-get
+      responses:
+        200:
+          description: OK
+      tags:
+      - CIDR
+  /customers:
+    get:
+      summary: Manage customers
+      description: ""
+      operationId: customers
+      x-api-path-slug: customers-get
+      parameters:
+      - in: query
+        name: handle
+        description: the handle of the customer
+        type: string
+        format: string
+      - in: query
+        name: name
+        description: the name of the customer
+        type: string
+        format: string
+      responses:
+        200:
+          description: OK
+      tags:
+      - Customers
   /delegation:
     get:
       summary: Get Delegation
@@ -56,6 +115,8 @@ paths:
           description: OK
       tags:
       - Delegation
+host: www.arin.net
+basePath: /regrws/core/v1
 x-streamrank:
   polling_total_time_average: 0
   polling_size_download_average: 0
